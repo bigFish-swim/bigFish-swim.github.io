@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : "Your Name / Site Title"
+title                    : "Big Fish 的 个人网站"
 title_separator          : "-"
 name                     : &name "bigFish-swim"
 description              : &description "这是一个用来做个人展示的网页。"   # Update this with a general description of your site, this is the default if not overridden by a page
@@ -25,7 +25,7 @@ author:
   # Biographic information
   avatar           : "跳高的主人公.jpg"
   name             : "bigFish-swim"
-  pronouns         : "女  ♀"  
+  pronouns         : "女    ♀"  
   bio              : "想做游戏的中学生"
   location         : "中国"
   employer         : "SHS"
