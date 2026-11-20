@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 这里也可以改成你的名字 -->
+    <title>Big Fish 的个人主页</title>
+    <style>
+        /* ======= 这里是网页的样式（CSS） ======= */
+        :root {
+            --primary-color: #0366d6; /* 主题颜色，可以改 */
+            --bg-color: #f6f8fa;
+            --text-color: #24292e;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        h1 { margin-bottom: 10px; color: #111; }
+        .subtitle { color: #666; font-size: 1.2em; margin-bottom: 20px; }
+        .section-title {
+            border-bottom: 2px solid #eaecef;
+            padding-bottom: 10px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #111;
+        }
+        /* 技能标签样式 */
+        .skills-container { display: flex; flex-wrap: wrap; gap: 10px; }
+        .skill-tag {
+            background-color: #e1e4e8;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        /* 项目卡片样式 */
+        .projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width: 600px) { .projects-grid { grid-template-columns: 1fr; } } /* 手机端适配 */
+        .project-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #eaecef;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+        .project-card:hover { transform: translateY(-3px); }
+        .project-card h3 { margin-top: 0; color: var(--primary-color); }
+        .project-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .project-link:hover { text-decoration: underline; }
+        /* 底部社交链接 */
+        footer { text-align: center; margin-top: 60px; padding-top: 20px; border-top: 1px solid #eaecef; }
+        footer a { margin: 0 10px; color: var(--primary-color); text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <!-- ======= 这里是网页的骨架（HTML） ======= -->
+    <!-- 注意：id="..." 是给 JavaScript 找位置用的，千万别删掉 -->
+
+    <header>
+        <h1 id="name">加载中...</h1>
+        <div class="subtitle" id="title"></div>
+    </header>
+
+    <section>
+        <h2 class="section-title">关于我</h2>
+        <p id="about"></p>
+    </section>
+
+    <section>
+        <h2 class="section-title">我的技能</h2>
+        <div class="skills-container" id="skills-list">
+            <!-- 技能标签会通过 JS 自动生成放在这里 -->
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">我的项目</h2>
+        <div class="projects-grid" id="projects-list">
+            <!-- 项目卡片会通过 JS 自动生成放在这里 -->
+        </div>
+    </section>
+
+    <footer>
+        <p>联系我：</p>
+        <p id="social-links">
+            <!-- 社交链接会通过 JS 自动生成放在这里 -->
+        </p>
+        <p style="color: #999; font-size: 0.8em; margin-top: 20px;">&copy; 2024 Big Fish. All rights reserved.</p>
+    </footer>
+
+    <!-- 引入数据和执行逻辑 -->
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
